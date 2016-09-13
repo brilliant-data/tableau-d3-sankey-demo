@@ -1,0 +1,962 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 10100.16.0824.1845                               -->
+<workbook source-build='10.1.0 (10100.16.0824.1845)' source-platform='win' version='10.1' xml:base='http://88.151.101.155' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <repository-location id='arms-flow-workbook2' path='/workbooks' revision='1.2' />
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource hasconnection='false' inline='true' name='Parameters' version='10.1'>
+      <aliases enabled='yes' />
+      <column caption='SanKey HTML page URL' datatype='string' name='[Parameter 1]' param-domain-type='any' role='measure' type='nominal' value='&quot;http://88.151.101.155:80/webdataconnectors/senkey-chart.html&quot;'>
+        <calculation class='tableau' formula='&quot;http://88.151.101.155:80/webdataconnectors/senkey-chart.html&quot;' />
+      </column>
+    </datasource>
+    <datasource caption='sipri-arms-by-seller-2006-2016-with-pivot' inline='true' name='sqlproxy.1qtvcsz10ajjpx1d0zezr1eryi80' version='10.1'>
+      <repository-location id='sipri-arms-by-seller-2006-2016-with-pivot' path='/datasources' revision='1.0' />
+      <connection channel='http' class='sqlproxy' dbname='sipri-arms-by-seller-2006-2016-with-pivot' directory='/dataserver' port='80' server='88.151.101.155' server-oauth='' username='' workgroup-auth-mode='prompt'>
+        <relation name='sqlproxy' table='[sqlproxy]' type='table' />
+        <calculations>
+          <calculation column='[Number of Records]' formula='1' />
+        </calculations>
+        <metadata-records>
+          <metadata-record class='measure'>
+            <remote-name>Number of Records</remote-name>
+            <remote-type>-1</remote-type>
+            <local-name>[Number of Records]</local-name>
+            <parent-name>[sqlproxy]</parent-name>
+            <remote-alias>Number of Records</remote-alias>
+            <ordinal>24</ordinal>
+            <layered>true</layered>
+            <caption>Number of Records</caption>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='field-type'>0</attribute>
+              <attribute datatype='string' name='formula'>&quot;1&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Pivot Field Names</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Pivot Field Names]</local-name>
+            <parent-name>[sqlproxy]</parent-name>
+            <remote-alias>Pivot Field Names</remote-alias>
+            <ordinal>20</ordinal>
+            <layered>true</layered>
+            <family>Pivot</family>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='integer' name='field-type'>2</attribute>
+              <attribute datatype='integer' name='role'>0</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Pivot Field Values</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Pivot Field Values]</local-name>
+            <parent-name>[sqlproxy]</parent-name>
+            <remote-alias>Pivot Field Values</remote-alias>
+            <ordinal>21</ordinal>
+            <layered>true</layered>
+            <family>Pivot</family>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='integer' name='field-type'>2</attribute>
+              <attribute datatype='integer' name='role'>0</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>buyercod</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[buyercod]</local-name>
+            <parent-name>[sqlproxy]</parent-name>
+            <remote-alias>buyercod</remote-alias>
+            <ordinal>1</ordinal>
+            <layered>true</layered>
+            <family>sipri-arms-by-seller-2006-2016.csv</family>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LHU_RHU' />
+            <attributes>
+              <attribute datatype='integer' name='field-type'>2</attribute>
+              <attribute datatype='integer' name='role'>0</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>coprod</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[coprod]</local-name>
+            <parent-name>[sqlproxy]</parent-name>
+            <remote-alias>coprod</remote-alias>
+            <ordinal>12</ordinal>
+            <layered>true</layered>
+            <family>sipri-arms-by-seller-2006-2016.csv</family>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LHU_RHU' />
+            <attributes>
+              <attribute datatype='integer' name='field-type'>2</attribute>
+              <attribute datatype='integer' name='role'>0</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>delyears</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[delyears]</local-name>
+            <parent-name>[sqlproxy]</parent-name>
+            <remote-alias>delyears</remote-alias>
+            <ordinal>15</ordinal>
+            <layered>true</layered>
+            <family>sipri-arms-by-seller-2006-2016.csv</family>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LHU_RHU' />
+            <attributes>
+              <attribute datatype='integer' name='field-type'>2</attribute>
+              <attribute datatype='integer' name='role'>0</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>desc</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[desc]</local-name>
+            <parent-name>[sqlproxy]</parent-name>
+            <remote-alias>desc</remote-alias>
+            <ordinal>11</ordinal>
+            <layered>true</layered>
+            <family>sipri-arms-by-seller-2006-2016.csv</family>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LHU_RHU' />
+            <attributes>
+              <attribute datatype='integer' name='field-type'>2</attribute>
+              <attribute datatype='integer' name='role'>0</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>desig2</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[desig2]</local-name>
+            <parent-name>[sqlproxy]</parent-name>
+            <remote-alias>desig2</remote-alias>
+            <ordinal>9</ordinal>
+            <layered>true</layered>
+            <family>sipri-arms-by-seller-2006-2016.csv</family>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LHU_RHU' />
+            <attributes>
+              <attribute datatype='integer' name='field-type'>2</attribute>
+              <attribute datatype='integer' name='role'>0</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='measure'>
+            <remote-name>ldat</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[ldat]</local-name>
+            <parent-name>[sqlproxy]</parent-name>
+            <remote-alias>ldat</remote-alias>
+            <ordinal>7</ordinal>
+            <layered>true</layered>
+            <family>sipri-arms-by-seller-2006-2016.csv</family>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='field-type'>0</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='measure'>
+            <remote-name>nrdel</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[nrdel]</local-name>
+            <parent-name>[sqlproxy]</parent-name>
+            <remote-alias>nrdel</remote-alias>
+            <ordinal>13</ordinal>
+            <layered>true</layered>
+            <family>sipri-arms-by-seller-2006-2016.csv</family>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='field-type'>0</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>nrdelai</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[nrdelai]</local-name>
+            <parent-name>[sqlproxy]</parent-name>
+            <remote-alias>nrdelai</remote-alias>
+            <ordinal>14</ordinal>
+            <layered>true</layered>
+            <family>sipri-arms-by-seller-2006-2016.csv</family>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LHU_RHU' />
+            <attributes>
+              <attribute datatype='integer' name='field-type'>2</attribute>
+              <attribute datatype='integer' name='role'>0</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>odai</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[odai]</local-name>
+            <parent-name>[sqlproxy]</parent-name>
+            <remote-alias>odai</remote-alias>
+            <ordinal>4</ordinal>
+            <layered>true</layered>
+            <family>sipri-arms-by-seller-2006-2016.csv</family>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LHU_RHU' />
+            <attributes>
+              <attribute datatype='integer' name='field-type'>2</attribute>
+              <attribute datatype='integer' name='role'>0</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='measure'>
+            <remote-name>odat</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[odat]</local-name>
+            <parent-name>[sqlproxy]</parent-name>
+            <remote-alias>odat</remote-alias>
+            <ordinal>3</ordinal>
+            <layered>true</layered>
+            <family>sipri-arms-by-seller-2006-2016.csv</family>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='field-type'>0</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>onai</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[onai]</local-name>
+            <parent-name>[sqlproxy]</parent-name>
+            <remote-alias>onai</remote-alias>
+            <ordinal>6</ordinal>
+            <layered>true</layered>
+            <family>sipri-arms-by-seller-2006-2016.csv</family>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LHU_RHU' />
+            <attributes>
+              <attribute datatype='integer' name='field-type'>2</attribute>
+              <attribute datatype='integer' name='role'>0</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='measure'>
+            <remote-name>onum</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[onum]</local-name>
+            <parent-name>[sqlproxy]</parent-name>
+            <remote-alias>onum</remote-alias>
+            <ordinal>5</ordinal>
+            <layered>true</layered>
+            <family>sipri-arms-by-seller-2006-2016.csv</family>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='field-type'>0</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>sellercod</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[sellercod]</local-name>
+            <parent-name>[sqlproxy]</parent-name>
+            <remote-alias>sellercod</remote-alias>
+            <ordinal>2</ordinal>
+            <layered>true</layered>
+            <family>sipri-arms-by-seller-2006-2016.csv</family>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LHU_RHU' />
+            <attributes>
+              <attribute datatype='integer' name='field-type'>2</attribute>
+              <attribute datatype='integer' name='role'>0</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>status</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[status]</local-name>
+            <parent-name>[sqlproxy]</parent-name>
+            <remote-alias>status</remote-alias>
+            <ordinal>16</ordinal>
+            <layered>true</layered>
+            <family>sipri-arms-by-seller-2006-2016.csv</family>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LHU_RHU' />
+            <attributes>
+              <attribute datatype='integer' name='field-type'>2</attribute>
+              <attribute datatype='integer' name='role'>0</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>term</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[term]</local-name>
+            <parent-name>[sqlproxy]</parent-name>
+            <remote-alias>term</remote-alias>
+            <ordinal>8</ordinal>
+            <layered>true</layered>
+            <family>sipri-arms-by-seller-2006-2016.csv</family>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LHU_RHU' />
+            <attributes>
+              <attribute datatype='integer' name='field-type'>2</attribute>
+              <attribute datatype='integer' name='role'>0</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='measure'>
+            <remote-name>tidn</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[tidn]</local-name>
+            <parent-name>[sqlproxy]</parent-name>
+            <remote-alias>tidn</remote-alias>
+            <ordinal>0</ordinal>
+            <layered>true</layered>
+            <family>sipri-arms-by-seller-2006-2016.csv</family>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='field-type'>0</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='measure'>
+            <remote-name>tivdel</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[tivdel]</local-name>
+            <parent-name>[sqlproxy]</parent-name>
+            <remote-alias>tivdel</remote-alias>
+            <ordinal>19</ordinal>
+            <layered>true</layered>
+            <family>sipri-arms-by-seller-2006-2016.csv</family>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='field-type'>0</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='measure'>
+            <remote-name>tivorder</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[tivorder]</local-name>
+            <parent-name>[sqlproxy]</parent-name>
+            <remote-alias>tivorder</remote-alias>
+            <ordinal>18</ordinal>
+            <layered>true</layered>
+            <family>sipri-arms-by-seller-2006-2016.csv</family>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='field-type'>0</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='measure'>
+            <remote-name>tivunit</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[tivunit]</local-name>
+            <parent-name>[sqlproxy]</parent-name>
+            <remote-alias>tivunit</remote-alias>
+            <ordinal>17</ordinal>
+            <layered>true</layered>
+            <family>sipri-arms-by-seller-2006-2016.csv</family>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='field-type'>0</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>wcat</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[wcat]</local-name>
+            <parent-name>[sqlproxy]</parent-name>
+            <remote-alias>wcat</remote-alias>
+            <ordinal>10</ordinal>
+            <layered>true</layered>
+            <family>sipri-arms-by-seller-2006-2016.csv</family>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LHU_RHU' />
+            <attributes>
+              <attribute datatype='integer' name='field-type'>2</attribute>
+              <attribute datatype='integer' name='role'>0</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[sqlproxy]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='boolean' name='CAP_64BIT_CALCULATIONS'>true</attribute>
+              <attribute datatype='boolean' name='CAP_CREATE_TEMP_TABLES'>true</attribute>
+              <attribute datatype='boolean' name='CAP_QUERY_BLENDING_ALWAYS_USE_LOCAL_MAPPING_TABLES'>false</attribute>
+              <attribute datatype='boolean' name='CAP_QUERY_BLENDING_PREFER_LOCAL_MAPPING_TABLES'>true</attribute>
+              <attribute datatype='boolean' name='CAP_QUERY_BLENDING_REMOTE_MAPPING_TABLES'>true</attribute>
+              <attribute datatype='boolean' name='CAP_QUERY_EXTRACT_RANGES'>true</attribute>
+              <attribute datatype='boolean' name='CAP_QUERY_SORT_BY'>true</attribute>
+              <attribute datatype='boolean' name='CAP_QUERY_SUBQUERIES'>true</attribute>
+              <attribute datatype='boolean' name='CAP_QUERY_SUBQUERY_QUERY_CONTEXT'>true</attribute>
+              <attribute datatype='boolean' name='CAP_QUERY_SUPPORTS_LODJOINS'>true</attribute>
+              <attribute datatype='boolean' name='CAP_QUERY_USE_QUERY_FUSION'>false</attribute>
+              <attribute datatype='boolean' name='CAP_SUPPORTS_SPLIT_FROM_LEFT'>true</attribute>
+              <attribute datatype='boolean' name='CAP_SUPPORTS_SPLIT_FROM_RIGHT'>true</attribute>
+              <attribute datatype='integer' name='charset'>0</attribute>
+              <attribute datatype='string' name='class'>&quot;dataengine&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;binary&quot;</attribute>
+              <attribute datatype='string' name='datasource'>&quot;&lt;?xml version=&apos;1.0&apos; encoding=&apos;utf-8&apos; ?&gt;&#10;&#10;&lt;datasource :source-version=&apos;10.1&apos; formatted-name=&apos;repoItem8050735457055235592&apos; inline=&apos;true&apos; version=&apos;10.1&apos; xmlns:user=&apos;http://www.tableausoftware.com/xml/user&apos;&gt;&#10;  &lt;repository-location id=&apos;sipri-arms-by-seller-2006-2016-with-pivot&apos; path=&apos;/datasources&apos; revision=&apos;1.0&apos; /&gt;&#10;  &lt;connection channel=&apos;http&apos; class=&apos;sqlproxy&apos; dbname=&apos;sipri-arms-by-seller-2006-2016-with-pivot&apos; directory=&apos;/dataserver&apos; port=&apos;80&apos; server=&apos;88.151.101.155&apos;&gt;&#10;    &lt;relation name=&apos;sqlproxy&apos; table=&apos;[sqlproxy]&apos; type=&apos;table&apos; /&gt;&#10;    &lt;cols&gt;&#10;      &lt;map key=&apos;[Number of Records]&apos; value=&apos;[sqlproxy].[Number of Records]&apos; /&gt;&#10;      &lt;map key=&apos;[Pivot Field Names]&apos; value=&apos;[sqlproxy].[Pivot Field Names]&apos; /&gt;&#10;      &lt;map key=&apos;[Pivot Field Values]&apos; value=&apos;[sqlproxy].[Pivot Field Values]&apos; /&gt;&#10;      &lt;map key=&apos;[buyercod]&apos; value=&apos;[sqlproxy].[buyercod]&apos; /&gt;&#10;      &lt;map key=&apos;[coprod]&apos; value=&apos;[sqlproxy].[coprod]&apos; /&gt;&#10;      &lt;map key=&apos;[delyears]&apos; value=&apos;[sqlproxy].[delyears]&apos; /&gt;&#10;      &lt;map key=&apos;[desc]&apos; value=&apos;[sqlproxy].[desc]&apos; /&gt;&#10;      &lt;map key=&apos;[desig2]&apos; value=&apos;[sqlproxy].[desig2]&apos; /&gt;&#10;      &lt;map key=&apos;[ldat]&apos; value=&apos;[sqlproxy].[ldat]&apos; /&gt;&#10;      &lt;map key=&apos;[nrdel]&apos; value=&apos;[sqlproxy].[nrdel]&apos; /&gt;&#10;      &lt;map key=&apos;[nrdelai]&apos; value=&apos;[sqlproxy].[nrdelai]&apos; /&gt;&#10;      &lt;map key=&apos;[odai]&apos; value=&apos;[sqlproxy].[odai]&apos; /&gt;&#10;      &lt;map key=&apos;[odat]&apos; value=&apos;[sqlproxy].[odat]&apos; /&gt;&#10;      &lt;map key=&apos;[onai]&apos; value=&apos;[sqlproxy].[onai]&apos; /&gt;&#10;      &lt;map key=&apos;[onum]&apos; value=&apos;[sqlproxy].[onum]&apos; /&gt;&#10;      &lt;map key=&apos;[sellercod]&apos; value=&apos;[sqlproxy].[sellercod]&apos; /&gt;&#10;      &lt;map key=&apos;[status]&apos; value=&apos;[sqlproxy].[status]&apos; /&gt;&#10;      &lt;map key=&apos;[term]&apos; value=&apos;[sqlproxy].[term]&apos; /&gt;&#10;      &lt;map key=&apos;[tidn]&apos; value=&apos;[sqlproxy].[tidn]&apos; /&gt;&#10;      &lt;map key=&apos;[tivdel]&apos; value=&apos;[sqlproxy].[tivdel]&apos; /&gt;&#10;      &lt;map key=&apos;[tivorder]&apos; value=&apos;[sqlproxy].[tivorder]&apos; /&gt;&#10;      &lt;map key=&apos;[tivunit]&apos; value=&apos;[sqlproxy].[tivunit]&apos; /&gt;&#10;      &lt;map key=&apos;[wcat]&apos; value=&apos;[sqlproxy].[wcat]&apos; /&gt;&#10;    &lt;/cols&gt;&#10;  &lt;/connection&gt;&#10;  &lt;column aggregation=&apos;Sum&apos; datatype=&apos;integer&apos; default-type=&apos;quantitative&apos; name=&apos;[Number of Records]&apos; pivot=&apos;key&apos; role=&apos;measure&apos; type=&apos;quantitative&apos; user-datatype=&apos;integer&apos; user:auto-column=&apos;numrec&apos; visual-totals=&apos;Default&apos;&gt;&#10;    &lt;calculation class=&apos;tableau&apos; formula=&apos;1&apos; /&gt;&#10;  &lt;/column&gt;&#10;  &lt;layout dim-ordering=&apos;alphabetic&apos; dim-percentage=&apos;0.534271&apos; measure-ordering=&apos;alphabetic&apos; measure-percentage=&apos;0.445518&apos; parameter-percentage=&apos;0.0202109&apos; show-structure=&apos;true&apos; /&gt;&#10;  &lt;semantic-values&gt;&#10;    &lt;semantic-value key=&apos;[Country].[Name]&apos; value=&apos;&amp;quot;Hungary&amp;quot;&apos; /&gt;&#10;  &lt;/semantic-values&gt;&#10;  &lt;date-options start-of-week=&apos;monday&apos; /&gt;&#10;&lt;/datasource&gt;&#10;&quot;</attribute>
+              <attribute datatype='boolean' name='extract-active'>false</attribute>
+              <attribute datatype='boolean' name='fast-get-server-time'>true</attribute>
+              <attribute datatype='string' name='version'>&quot;0.0.0&quot;</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <overridable-settings>
+        <date-options fiscal-year-start='january' start-of-week='monday' />
+        <default-date-format />
+      </overridable-settings>
+      <column aggregation='Sum' datatype='integer' default-type='quantitative' layered='true' name='[Number of Records]' pivot='key' role='measure' type='quantitative' user-datatype='integer' user:auto-column='numrec' visual-totals='Default'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[Pivot Field Names]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+      <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[Pivot Field Values]' pivot='key' role='dimension' semantic-role='[County].[Name]' type='nominal' user-datatype='string' visual-totals='Default' />
+      <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[buyercod]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+      <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[coprod]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+      <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[delyears]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+      <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[desc]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+      <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[desig2]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+      <column aggregation='Sum' datatype='integer' default-type='quantitative' layered='true' name='[ldat]' pivot='key' role='measure' type='quantitative' user-datatype='integer' visual-totals='Default' />
+      <column aggregation='Sum' datatype='integer' default-type='quantitative' layered='true' name='[nrdel]' pivot='key' role='measure' type='quantitative' user-datatype='integer' visual-totals='Default' />
+      <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[nrdelai]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+      <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[odai]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+      <column aggregation='Sum' datatype='integer' default-type='quantitative' layered='true' name='[odat]' pivot='key' role='measure' type='quantitative' user-datatype='integer' visual-totals='Default' />
+      <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[onai]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+      <column aggregation='Sum' datatype='integer' default-type='quantitative' layered='true' name='[onum]' pivot='key' role='measure' type='quantitative' user-datatype='integer' visual-totals='Default' />
+      <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[sellercod]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+      <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[status]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+      <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[term]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+      <column aggregation='Sum' datatype='integer' default-type='quantitative' layered='true' name='[tidn]' pivot='key' role='measure' type='quantitative' user-datatype='integer' visual-totals='Default' />
+      <column aggregation='Sum' datatype='real' default-type='quantitative' layered='true' name='[tivdel]' pivot='key' role='measure' type='quantitative' user-datatype='real' visual-totals='Default' />
+      <column aggregation='Sum' datatype='real' default-type='quantitative' layered='true' name='[tivorder]' pivot='key' role='measure' type='quantitative' user-datatype='real' visual-totals='Default' />
+      <column aggregation='Sum' datatype='real' default-type='quantitative' layered='true' name='[tivunit]' pivot='key' role='measure' type='quantitative' user-datatype='real' visual-totals='Default' />
+      <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[wcat]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.474517' measure-ordering='alphabetic' measure-percentage='0.345343' parameter-percentage='0.180141' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Hungary&quot;' />
+      </semantic-values>
+      <filter class='quantitative' column='[nrdel]' filter-group='2' included-values='in-range'>
+        <min>1</min>
+      </filter>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='SIPRI Arms sales 2010-2016'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='sipri-arms-by-seller-2006-2016-with-pivot' name='sqlproxy.1qtvcsz10ajjpx1d0zezr1eryi80' />
+          </datasources>
+          <datasource-dependencies datasource='sqlproxy.1qtvcsz10ajjpx1d0zezr1eryi80'>
+            <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[Pivot Field Names]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+            <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[Pivot Field Values]' pivot='key' role='dimension' semantic-role='[County].[Name]' type='nominal' user-datatype='string' visual-totals='Default' />
+            <column-instance column='[Pivot Field Names]' derivation='None' name='[none:Pivot Field Names:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Pivot Field Values]' derivation='None' name='[none:Pivot Field Values:nk]' pivot='key' type='nominal' />
+            <column aggregation='Sum' datatype='integer' default-type='quantitative' layered='true' name='[nrdel]' pivot='key' role='measure' type='quantitative' user-datatype='integer' visual-totals='Default' />
+            <column-instance column='[nrdel]' derivation='Sum' name='[sum:nrdel:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[sqlproxy.1qtvcsz10ajjpx1d0zezr1eryi80].[sum:nrdel:qk]' scope='cols' value='Delivered amount' />
+            <format attr='subtitle' class='0' field='[sqlproxy.1qtvcsz10ajjpx1d0zezr1eryi80].[sum:nrdel:qk]' scope='cols' value='' />
+            <format attr='auto-subtitle' class='0' field='[sqlproxy.1qtvcsz10ajjpx1d0zezr1eryi80].[sum:nrdel:qk]' scope='cols' value='true' />
+            <format attr='display' class='0' field='[sqlproxy.1qtvcsz10ajjpx1d0zezr1eryi80].[sum:nrdel:qk]' scope='cols' value='false' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='rows' value='false' />
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[sqlproxy.1qtvcsz10ajjpx1d0zezr1eryi80].[sum:nrdel:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[sqlproxy.1qtvcsz10ajjpx1d0zezr1eryi80].[none:Pivot Field Values:nk]</rows>
+        <cols>([sqlproxy.1qtvcsz10ajjpx1d0zezr1eryi80].[none:Pivot Field Names:nk] * [sqlproxy.1qtvcsz10ajjpx1d0zezr1eryi80].[sum:nrdel:qk])</cols>
+      </table>
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name='Dashboard 1'>
+      <style />
+      <size maxheight='900' maxwidth='1280' minheight='900' minwidth='1280' sizing-mode='fixed' />
+      <zones>
+        <zone h='100000' id='4' type='layout-basic' w='100000' x='0' y='0'>
+          <zone forceUpdate='' h='100000' id='3' param='&lt;[Parameters].[Parameter 1]&gt;' type='web' w='71172' x='28828' y='0' />
+          <zone h='100000' id='1' name='SIPRI Arms sales 2010-2016' w='28828' x='0' y='0' />
+        </zone>
+      </zones>
+    </dashboard>
+  </dashboards>
+  <windows source-height='30'>
+    <window class='worksheet' name='SIPRI Arms sales 2010-2016'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[sqlproxy.1qtvcsz10ajjpx1d0zezr1eryi80].[none:Pivot Field Names:nk]</field>
+            <field>[sqlproxy.1qtvcsz10ajjpx1d0zezr1eryi80].[none:Pivot Field Values:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+    <window class='dashboard' maximized='true' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name='SIPRI Arms sales 2010-2016' />
+      </viewpoints>
+      <active id='3' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Dashboard 1' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAAA7EAAAOxAGVKw4b
+      AAAgAElEQVR4nO2d+XNj13XnP1gelod9B0g2d7LZbHW31OpWS7Jsy7KleCxHFc+Uk6lJzVSq
+      ksoslZ/m1/wbnqqpSSUzNZWZJFUZO9YSyY7UsuReqV7YC7ubOwgSALEQ+w48YH5gkxLdbFlq
+      EmjSuJ+fyPcu7jkgcXDv991zz1W1Wq0WAkGXon7aDggETxPt03agG0nEI0/bBcFDRAA8JTze
+      nqftggAxBRJ0OdsBEA8HmZr6jIVgmNDSEnXg0qfnuXL5EulilalLnzJ19QrrG3kiS0uUt17Y
+      qnHhwtS+OHPnzp3H3mspNa5NXeXy1esoLbhzY4obd+4DLRZmbjAfim/2sX19k+R6iKtTU8wt
+      r1LMxLl8+TJr8Qy1cp7zn1wEoFHJc+XKFRZXxNSk29gOgFt3H3D6zBmG+wOElpZoAMWqwosv
+      vsDNq1fIFqu8cO4cd29OEf1CAIRmpklkM+RqLUKhFe7cnGZpaY4bN65z8dIlLl64SLle57Mr
+      l7k/vwxAan2VqalrxNN55u7d5sqVKaoKZLNZ0rE1rly5TCJX5sHdaaZu3Aag2Whw/PRZHGS4
+      f+8WZbkfuRwjnK3gdlsJhhLkIzOfX88rABgtLs69cJbluftM3bjLuZdeYu7uDcpVhUatBMDF
+      i1d5/oUXGRkQ05JuYzsAvvXKS1y5+CnXbn3+7RkLr3D16lVGJk6wEQvzP//mbzh15sUdHdx8
+      sESPuc6FK3d5cGeagYnjRCJxnjv9PKVikWMBPUvhDWLJHGrNpuSIJxLUGzUkSUJRGtTTQWZC
+      GQA+vXARSZK4fOEC8dg6qNS0AI1e5sG1C2T1AdzqInaXG5fdSK6sxm6VAShms9vXw2sRbs3M
+      IlHnvXfe49kXXkaj1aIGtFotNrsdtWrzPeTzGe7cvMY7H3zUxj+14CCyHQCroRAGo0y5XNq+
+      6esd4NyL32Cgx4nL18uP3vweU9enP3+1UsbmG+Lct99EX48j21xYjRIADz9bqFQqmi0tXq+T
+      ezMzANjtDnRaFXdn7jM/v4BOkmg2mwAc6etFacLJkydxutzEl+6TrkEh+oDP5pNolTLGnqPM
+      Xf2Qq3MbDNobXL95h+WFB0ie4e3rp44e4dTxo7z/7ru4AgGS8Thui55Lly+j1ltYXwuytLTM
+      rZlZxkeHqTYUJElq859bcNBQiYWwzpOIR8RToAOCeAok6GpEAAi6mgMZAI1G41D3Lzg8HMgA
+      KJVKv73RHiiXy7+9kaArOJAB8NtIJpMdtVdKrjO7ut5Rm4LOcChzgaqlPDc/W8HodqIH1CqF
+      /EaapUic4dERvN4AXpdtTzaCc3fYKCtEllYYHR6kaLBxb/oqiYqEXacwfuJ5jNKh/P4QfIFD
+      GQBWi4V8tYXTIJEpNahmMwwfm0AtW/AGenHbLXu2YXf50FQVLDodDocTm1aPriEh19W47Gbx
+      4f8dYXsdIJ/PP21ftimVSsiyfGj7B9DpdOj1+l3viXWAg8P2CGCx7P1bc7/46Poyf/Dqya/c
+      vtFooNV+vcHs677fr2sjl8s9NgAEB4d9nAIp3L07x1Cvm1RdwxGvk2Qyidvt3tGqWa9QRYdR
+      UpPP53f9IJ6/sRkAC9c+RDv6PapL52k4T+OWssRzNfKxIEa3j2QoTP+xk4wc8e3f2xB0FfsW
+      AJm1ZYKRBDq1QgUViYV7tOxeVtaiSI0cJbUNqZHDrFNRlwMkN+IYWw2sVpm1jQp+m4TO7OTo
+      6NB2n6P9Ae7kNrh88Sr+Ez6Ov3qcZGYGg8HA0vIqXpOe5aVFEQCCJ2bfAqBlcvGD7/hZT1YJ
+      6Gv8cmaWF4+dwqqFXDqJXWPEYR2gUcpQ11ow6DQYVQ1aGi2Dcgu/x/FInzPBBDmdxJ//x/9M
+      OCMRDs4RDCcY9ps5eWKEbPg+IxPP79dbEHQhBzIZ7tZsiFNH+79y+687P3/c1Gs/beRyOaxW
+      6673hAg+OBzIZ3lDAfvTdkHQJTzxFCgeDYLeQym9RmDgKK1aCZ0s7xpR0WgUSZIeCuIGpZKC
+      LH/+hGRxfg6b3USuqGV4cHM+X8mnuHYvSJ9DRyTXxKatEIwXefON7zypywLBIzxxAITD66DL
+      USsUyBZugUaHVa9CMuiZnrqGb/wUzVqJc88/S6VSQVEUbt/4DKPdSGa9jtHYoKwxo242GOj1
+      opG0WEya7f4NFicOc5S1cJhUCZ775ikUU21f3rRAsMUTBkCLwZGjmx08nBcrSoNWvUqxUmNs
+      chLZ6cEub95TNeuodVaGxiaAKjaDQiKTZqS3F0m9+zP5YiZOMBhkYmKCenSDTEHhxNiRJ3NX
+      IHgMB1IEf5mA3A0hggVPyoEUwQJBp+hIMlwmEaPQVKNpNr4ghj9nt9ycLRE84rdy/UGIH/7e
+      a/vuVyy8QjxXQ1vLslFR88q50/tuQ3Cw6UgArIbXKCtaPE4ryfUwqVSc+Zl7uAaOoWrV8Tpt
+      ZGKrNIxezp6aAD4XwSazhSNH+tril693gGRmBqvdjl5laosNwcGmIwHQNzC8/bNKqSFbbYwe
+      m8Ro9eKw6Dfn16om6Mzb7bZEcLFYpFRvj19bK8seuYXO0QsE2mNIcGARIrhNNoQIPhwcSBEc
+      zxSftguCLqFjATBz9y717DrJXfa7/+Ym+Hi6SHRlnl++/wvyDbj0yYcEw+t8+OHHAPz0pz/t
+      hMuCLqAjGqBZybAWDGKSdaRrNe5tRHEYFLJNE2ZVBaPdSyn5GyJYb0DJrRJKNYhGIqhMXgIB
+      L/PTv+bO7ArfzlVwWQ2dcF/wO0xHAqBYafHdN39AJhKi2aqzsJFh4uxxbE0tDquJRqNBQbtT
+      BBuMRiT/JJNeLRybQG2WWZ2dZfzZs/zZfxgWH37BvnAgRXA0vkHA6/rK7YUIFjwpB1IEmwyi
+      SrOgM3QsAGKrCySylV3vrUejj1yr5FNcuHqDllLmpz9/n2uXP+H2g8V2uynoMjpWF2gtmkCb
+      rRNeyCOptTRaFYo40DdKmD1Oolc+3XUl+Pw/v8daJEt/7ySpVAoY6ZTLgi6gQwHQZHhsEmii
+      1fahlNJ8cuEqx18YpV7W4bXbKTxmJfgbr73FRCZBfmMdtd78eBMCwRNwIEWwWAkWdIoDKYIF
+      gk7RtinQzMwMk8ePb58V9pvk83kkjeax+4i30qGH/RauP1jFb9FQUZv55ov7Vwbl/q1rZBs6
+      ZEqEMzX+1Xe/tW99Cw4HbQmAVr3AenAJnVZPUWNAU4jRbNRYjiTpHxym1WyiqheQTE5MUotM
+      SUFV3thVBDsdTirlecoaFUXV48LpyZB0OlLxFKdOj6LNHco6wYI90pb/erlU55Xv/5D8+iq9
+      vj6mzk/j7h9nfNSO2xvAqNdQymeoocNukfEAmQ3DriK40WjgcrtwW9TI7G/Ovk6nw2K1kq6q
+      mRzy72vfgsOBEMFtsiFE8OFAiGBBV9P2ie/qwn2sfUexGR4fa7vtCS6kYly4eAVr4AiZdI5e
+      hw6ttYfj44Nt9ljQTbQ9AKKJONm6jvlcEqPZSKFQwWHVc292hd7+QZqt5q57gs1OB1RrFIsF
+      8oUCkXIVqaQSASDYV9obAM0qY5NnoVlF2+f9/HqrQaslYXF7sRh33xOcjseR7A56fF40Gj3D
+      XjPJipixCfaXbRGsKMrT9mWbYrEoRLCgI2z/R6vV6tP0YwfxzNcLAIHgSWnrFOjS+X/h5Lde
+      x/wFK4lEAo/Hs/377OwsPp8Pu/3zkujxdBG3IczHH3/KK7//h6zeuYQi6UmsJfH1BUhFVzj1
+      nT/Au8dz7laXZrmzuM6Q18RGRUFVLoLs4hsvnNpbx4JDQxsDoMHy4l2qNLEE+lm98YAECg5V
+      BZe/B6dZzz/+7Be88tZb5PN5IvO3qFpH+PGbrwJg9/bSPzqOR9aQt1mJprIUKyVaLRU27wB2
+      4949dDodVGaWsdp70atMqAsxzIPH996x4NDQtgBQimm+++P/gpJbZX5+kZETE/hrNey6BpIt
+      QI9Vy2uvlQj09GCTQK9SaMlf2AbZqhPo2TwlJpFM4fD20ijXaNarFCplKhUFnVHzGOtfjXgs
+      jsvlJry6is7Ri9fhxS2LlIhuYlsEVyq779Z6GqRzRbEnWNARtv+jBsPBqbJgqomDMASdoTPj
+      vVLm7lyEZ459YTtjNU8eCxb9l68EewZGqNaaSLX0vqdDb1WHPjHSw/lfX0KnlynlC7z47Zf5
+      6PxlfvTDN/bNluBg0pEAWFsOEklkkA1q1MBGdAW9QU/NMoQ6u7JrYaytleDQ2hqalhqLXqGy
+      z+nQW9Wh0Rlx2W3YHW7ufXaev/rbd9BTQwH2pjIEB52OBIDJ5ec7/gDhdIFKpUbgyCA6o0y2
+      2MB7dHLXwlhbK8ET42Msh2L4LCpK+5wOvVUdeqLfzWqigNXpQfJP8l//6GUi4bD48HcBIh26
+      TTaECD4ciOQaQVfTlgC4P3OX5i7Xk8nk9s+NaolsvrRruy22qkBPXfwVH1+4wK/Pf8SlS1f4
+      2T/8HYnSwcldEhxe9l8DNCvE14KoZCeJ6Bo6JY/k8KEUGxjlFolUivD8DB5vP2pPAHN4gYVY
+      Cb9NQmd2cnR0CGBHFeiBXi818yCppc/AGqBfL+GRxQxdsHf2PQCqxQpnv/sm6dV5Gm4PDoMH
+      tcGE2WgmsxFBK1vRjh7DZDQRK+QxO10M6uz4PY4d/Yw9+03+zLNZBTpSsHPE2mSh2GS4T49k
+      699vtwVdihDBbbIhRPDhQIhgQVfTxgCoc+vGTdaicWCnAP4qrK/M84v33iFZbodvm8TCK9y5
+      P98+A4IDTxsXwppUq3Ua1Rzv/exTPIOTLCyvYtcrxEpqbFKdagNMBh33FyMcH/PT1Lt5ZnwA
+      gEa1QqlUoqq0bz12eyVY0LW0MQA0WC0yRqNpx5nAxVwanV2Dx7E5Py7m0kxqjbg8VpSWbvvV
+      VocLi8OFVWrfILW1EnxcbAHoWoQIbpMNIYIPB0IEC7qa9ifD1bPcuLtGoDdAwOskmUzidrt3
+      NNktHbqYWOWT6SBHhz1MTc9xeryP9bzCt18+23aXBd1D+wOgWadaV6jmkvzs048YnHyW5dUI
+      FqmFSqNhdiXOiaNDFLKpHSvBi8E1DGTR2Z9nfLCMw2ljOfHoWWICwV5ofwBoZCyyhNFk4djk
+      BFavH4t+85ZSK9PUGLHb7Y+MCpPHj/HJpesYGlmGJk8SeXANt8uxiwGB4MkRIrhNNoQIPhwI
+      ESzoavY1AFaDC9yeebDrveT6OvUv/v4bK8O/+XsxHedf3vsn4iW49MmHBINBfnX+fX754aci
+      HVqwb+yrBqhWazQaTR7cvvZwtbexfSZwqenCXdhgMZRm0GehqVZx+dcXGRgZIlWs4zJCKltg
+      fGQQAKMsbxfAikYiqExevE4vg888z/1b10U6tGBf2NcAsFgs1NV17LJ1e7V360zgybPj2Ax1
+      hgdMGDUKKr2JoxNabA4ncqWOz2Xf0Vcitk6hmKVSUZg4NoHabMcma5E1nxfMEgj2ihDBbbIh
+      RPDhQIhgQVfTtgCIrAa5dXuGL0rVR1Oi6yST2V1fX0jF+OCdn7NxcCo2Cn4HadtCWK1aRWk0
+      WHpwm2CshNeiQTKYWI3EUPJx1AYTLa0BpdIgstKgggbZ8nk69FZhrGZLlKcStI+2BYDZYqFc
+      V2O1y9t7fiuFLIW6Co1Fj0YvU8hlsHo8pLN5Bp1mGnyeDr1VGMugFrM0QfsQIrhNNoQIPhyI
+      r1dBV9OR2qCz9+6gMdoYHeqHUpJo3UbAJn3pa7bSoccGHCRyTXrtNWraUcYG7V/6uq9Ds5bn
+      57+8zIBHRnb3k40sYHD1c2pydN9sCA42HQmAWq2KVtvgo/f/if4j/RRUFi58sshz431kqxCw
+      mdnIb6D6wp7grXTo63cyyAY95848y4OZ/T034JfvvU84UUJTl7HUdQSsZvL1xr7aEBxsOhIA
+      FrMFlcHI8NgxrFYLRkWLVj2MrzdAoFlnKbSO1xfYsSd4Kx36xbOjLIdiLM4ESWR0gPfxhr4m
+      3//RHxIOh6nkN8g11CQTCfzDffvWv+DgI0Rwm2wIEXw4ECJY0NW0fQq0GlwgXWxw8vjmyS/R
+      aJRAIEC9UgKdzOOqnlTyKa7dC/LKudNMXfwVRWQqyRD+I8MkYgleev33sOzR+60jkp4ZcvPO
+      B58weuwk4YXb2PrGCC4F+cMfvbk3A4IDT9sDYCtF+vqlX9E0+XFoitxcX0WpGNH7zVhUUCnm
+      yRYqONze7XRog8WJw7y5B3izOvQRZrMxSqUySm6VUKrBce/e3N8qjFWOhTj6re+Tn53G5h3g
+      2RNjaBSx36AbaPsUyGKxYJRlevoH6fG5cHk9hIIhbF43XotMsdKgt3+IycljO45GLWbiBINB
+      MsUais7OEYeEzmjC6/Mh+SeZ3OOHHz4vjCX3HyM89TEWp4NCMUsyHGfsxIk99y84+AgR3CYb
+      QgQfDoQIFnQ1HQ6AEtPXbhOO7UyLLpVKj7Ssxhb4fx98ytraKtMzs51yUNBldOag7G0UqtUG
+      pY0I/3T1MoNDo9TrNdwO6yOFsapNHXIri2TvQcruvtFeINgrHQ4AHRarAZvbxTgSLm8AWa+h
+      0Wg8UhgLnQ5JMlFKBAmurjNx/LjYFSDYd4QIbpMNIYIPB0IEC7qajgRANhFl5v4d5pcjO67n
+      8/nHvqaST3Hh6o12uybocjqiAerVGoqiUCpkufJZDJ/bDijEo3GsVpm1jcoj5wR/cSVYIGgX
+      HQkA2WJBKpSwOX1YjBLlQpZMSUVfb4CWRsug3HrknOCtleDewTHsJt1jehYI9oYQwW2yIUTw
+      4UCIYEFX07F1gKX5B1RbEsfGRwCIRtew2TzIsn7XI5KiK/PcubeEM+Ahnsjxg9df7ZSrgi6i
+      YwFQrVapq1XM3L4JOguyvkwinEJrsaDTQT62SsPo5eypzX0DBr0BJbfKrGJAWy90yk1Bl9Gx
+      ALBYLFSaEkaN7mEAWLDbLZRKaWRZRq9qgs683d5gNCL5J/nWESfzEUOn3BR0GUIEt8mGEMGH
+      AyGCBV3Nl36lZRNR1pJJAn1HcVp2PotvVEsoGhn9wx6SySSNRh2/P/CVjVdKJXSy/NSi8N6t
+      zwglK7iMTRo6By+dOfmUPBE8Lb40ALZWcNdWllgpF0BSIcl6SskSZr1Ey2phcTHE6WfGyaWT
+      pIp11lcWqEgOdEoRi8VEoVhhNRJj7Og4uVwBsw7QaNCiodDU4jC0yJQUVOWNHSK4E5RLZQrF
+      Ij6nH01LFMTqRr40ALZWcF1OF8mUFo9Tpt6CgcAw1XyGulaLeniAvr4+8jYbPY0GlVKeutqA
+      3WwkGYvgDzjQy2aoFsnkS/SN9IDOAkoVn0lGo9HiATIbhh0iuBO43W4KLRlZ26JhcHbUtuBg
+      IERwm2wIEXw4ECJY0NW0ZR0gH1llNhnD7xtFqRWpFdPYXX5KlRo+j5N6vY5W1WR9I4/PaSZV
+      qGFQ1ZHMTmxmI7CZDv3pZ/eYGHDzwa+v8+d/8sf77ufa8iwXbs7xb//17+9734LDQdsWwrR6
+      E5HgAr0eKxmtHb+myVo2R7OUJFNpodfq2ViPURkdwKzRki5kyMXSPH/qGWAzHbrX5+BIfy9n
+      TrdroFLz0ovn2tS34DDQlgAwulzIhSqTp08SXU8w4bSQLVZw2W04bWa8gM4gIZtMeP1eNEBO
+      q8Zjsm33UczESSQSxNx+jp8Yb4ebtJoKK6FVBnr2r+K04HAhRHCbbAgRfDgQIljQ1XS0LEo1
+      ucb0WhK3I4DdqqOYSWF3uUik8jisJrLZLENDm1sii+k4H/3iFzz/+/+e9dsfk6xKVHMZ3vjO
+      y3z62T3eeO2VPfuzujTLr6ZmOHOsn+V4gUY5x1tvvbXnfgWHhw7XBQK1ZKCYjGB3DbORjJOr
+      qHA5rWSzOw/MbjWbDDz7Mr0myBjNmDVa+jyObXG8Hxj0esxmE2qtxAtnzxALr+xLv4LDQ0en
+      QJLNjU3SMHzsGA6zFY+/F79Tplgu4/f78fv9221bQHp9lVxZodlsMjLaTyaRYGZmhkQiQaa4
+      9/PCms0mo6NjNOo11sIRipkEc8HwnvsVHB6ECG6TDSGCDwdCBAu6mo4FwNrKEtNXLxHLV0kn
+      Y1SqVbLZPCuhNUr5DIlUllQqtd1+ZeY6f/e3f8vUnQf8j//1f9rj0/Isf//Td9rSt+Bw0NER
+      wGAysh4KoafGajTKnQchWrSYn58jnkjsEMJNlRarrMbj83Hm9Nk2eSRWgrudjj0FcrtclBtq
+      jvYFMOgkDMUVTkwOYdBp8NjNZMsKDqtpu/3A2DixgoLfqKFHrAQL2oQQwW2yIUTw4UCIYEFX
+      0/Yp0LWrFzE7fQweOUI+EqTlHaCQTOC06GmoDWiUMtWWhFYp70iHji3d5/piErO+SiLT4N+8
+      9f199+3yJx8SSlWwairo7AHSawv4R5/jlRfE3uBuoQMjgBqdrk54NcpadIPVtQiNRpVMJs3i
+      4iKJVJZyIUs6k2ZhcXH7VdlsmnJ6Ga11gFg81hbPtFotrRYcHR8nFg+j1cqAOB+4m2j7COB2
+      OXG6B8ilYow+c5xKOc+NByHOnRjF5PBjNRloNpsUsukd6dDjz56j0DTS7zfgff2Ntvh2dOIo
+      BleZFkXeeP2HJFYe4Bvq3KZ8wdNHiOA22RAi+HAgRLCgq9mXKVBybYW15Dp2/wQBu55mSyEc
+      XMM9cIRmpUKrUQWdiUIqSc/gEMHZGYwOL0qpgL8nQGwji1kHGtmOzbRZB3RrT7DXrGI+muOF
+      43Yy1RFOHRfP7AX7x75pAMlgYn1tFXI6yipwmg0sLK3gMhlQqVVoy3mSyQQ1jR0AdbNCLBkl
+      kamiM2ioSKDK5LGNjQGf7wkuFYv0eh0MjA5TmNkvbwWCTfYlAGxuF6lyg+eeCRBZTzEY8KAF
+      LC4FVCo0ajXQArUel9uCWj2GXq+jqbSwWWxkSlVMUguNbN/uc2tP8LHJSdL5CnMzEYp1CRAj
+      gGD/ECK4TTaECD4cCBEs6Gravg6wVSTL6Rii12NCoUkhU8DmsFKt1cjmSthNEivRDXp8bpzO
+      zRqd+cVp3pvPce5oD5ev3eXf/fgP2u2qoAvpSDaoVm8iHQ2hLpvIqVV4VBqilQzpuh6XQUN8
+      o4jVZCCbzW4HQM1ox5CeZr0Q4KWXXuyEm4IupO1TIKPLhaySeObUBC3JwOiRfvwDvdDSMdbn
+      x+f14LZbMJhsO/YE290eAmPP0W+BlZVQu90UdClCBLfJhhDBhwMhggVdTXsCoFXn9s1p4okE
+      wdUwxVya1dVVYok0d6avU6xUCa2EaNQrTF27SSqVIrkeJlso7+jjJz/57ySjq1yausHs3Zu8
+      88H5trgr6F7aFgCyzUurXia4sEgsk0dRFOrVInaXh7nPLoAeLlydxet1kc0+mg49f+sadVqo
+      TG5sJj1qjZZzL5xpi7uC7qU9T4HUMg5TBrXOwuDwCD6fezvSkrEIEy98i8R6lJfPjBKOZ/D7
+      PY+kQ489+xJ/OnycUiZCYiOPxyGxuhbB6/zq2kAg+G0IEdwmG0IEHw6ECBZ0NW2ZAqXiEdY3
+      Cvi8ThQkWtUsNUWF0+1hI7mBz22nWK6SL5bxOc1kSgraZgW10YbzYWmUTDzM22+/x7Pf+DY3
+      btzmT/74x+1wVdDltCUAKpUqA4MDxCIhYhs5ev0emk2F+9cv0dTZyZaKmLUqdKoW00slnIYW
+      ep0eTT29HQB2by/PnD5Dr0NmztzZ41MF3UNbAqDnyAArKyEcDjsmuwf7w0oPAZ+HcDRBoDeA
+      QasmFInz7PDmCPDFolgAtOqMjh6jWogzNjbaDjcFAiGC22VDiODDwYEUwcvRTNttLEXSbbch
+      OPh0JADW14I8WFhmIx4lnSsSCS2TzxdYXlmjWspzffrujpXgYqVGbOk+//wvv6YGfPD2P3Lh
+      6nXefvvdHdf3QrFS4/InH/IPP3sXgHf/5ifcX0/xy/MXCM7N8Nf/++/3aEFwGOhIAFRqCgP9
+      fWTSaRYXl6g3VYQWZ1lbWGQ2GsfjtD62MNZStIzT14e21WBkZGjH9b2yVRgrvz5PJFsnX27R
+      63PQf6SH58+IqtHdQEf2AwwM9LOyFsPucODwWzAZJJpuJyZ7FrfbSiZfxW7X7loYazxgZK1k
+      x+Lr4961a/SOTTD08Ppe2SqMZfEP8yd//qfkKxXurCRwuPw8Mzm05/4FBx8hgttkQ4jgw8GB
+      FMECQafY5ylQkzvTt/D3HSFfKON3WUgX65h10JJM5FMJbCYtRZWJVqOBxaBCaWlYWA4xNhCg
+      JZmwW2Rg5znBvabfYlYgeEL2OQAaGM1OdEqNaHCBQnMUo1Ihmkpgdfcy0mvj6t017Po4NZWB
+      gk6DVqPB67IzPz+P1d2L3TIA7DwnWCBoF/scADqcNj1NyUjf4DAqtYJkduJ12aiiR2Ow8cy4
+      GoOkJrqRx+9x0mpUiWfKjI2NUkW/3dP2OcEDg1iNmv11UyB4iBDBbbIhRPDhQIhgQVez/ZUW
+      WpqnrjFiN2rQyxYSyQ0a9QoWuxNVU4WqWcFgNbARh4Cjwb1wEakSQ2M7QsClo9U0ki/mMEpg
+      sNhJJ5L4jwwQnLtLSdEw3OuhJRnJJeM4PH50WjXR9TCSwUqtXGBoaOdz960jkr73+jfRdfzP
+      IugWtkeAekvFkR4fc3NzJFYeoJK0ZEtaPG492WyddDrF4tISAMFwnFI2iTMwiFVbQy/rmJuZ
+      xeb2brZ7cJOWTiIRLwAtFKXJ/Pw88XgEVBqmp64RDYUoa3SU8rvn/ezniq9A8Di2NUCjWiKS
+      zCFrFTQ6GdlsRqnVyJdK2K0OsqkYeosVncaASqWgVUG1pUKrAr1eQ7ncIJ5IYpRU6E1mDEYZ
+      mipAoakoVMsFaio166EoR4+NEYnEcbnMFCst7BaZLSkiy/Lm/Nli4saN2zz7/HO/dZ4mNIDg
+      SREiuE02RAAcDoQIFnQ1HUmG20GzwvStWcyyEYxGfFaZUkON1KoSz5SYGBvebEeHkCUAAAOv
+      SURBVNeq85P/9tc8f3KUSKaBRVMGk5c3Xv1Gx10W/O7S+RGgUcXsDGA2SBibLVYzGRYWF0nn
+      ish6abvZVmEsd2DznODx8XHisfacFyzoXp6KBkish9EarJiNOorlApW6Cm2zgsZow2E1bc+f
+      c7kc9VKWdFWLtpbG6O7H53h0g7zQAIInpfNTIMDj793+2a7XP7ad1WoFqxUXAIG2+yXoPoQI
+      FnQ1nR8BWnVuT89gM8gUZQNei5lCNovDZt6RDr0lgv/iL/4T1y9/TDKvoK6laVoGUSlV3njt
+      lT27EguvsBzNYJPqLMcL/OD1V/fcp+Bw0fkR4GHlaKtJh03bIpjIAjxcKU5sN9sSwRu5Mgaj
+      GbPdhbtnhDe+fZZen2NfXPH1DmAxalFrJV44KypPdyOdHwEeVo5G58Rr1mN1NNGqwGEz7UiH
+      3qoObbUaiTSbjIyOImtblB6eH5wp1rCb9pYlFA7OkcgU8ZhUrIUjuO3je313gkOGWAlukw3x
+      FOhwcCBF8F+/d7PtNv7yr87zl391XhTI6nI6PAVqMXN7Go/NQKgoM+i1YNCryRRqGFR1JLMT
+      m9m4XRlu4fLbVIfeIDH9Pg3bUWytOIreiVldZi1dxKKUyOt6+N43Tn5tT+4ux4HNAlmrS7P8
+      amoGrxmaBjffPH2Ud99+F2NggEqpwjNDXm7NR8RZxb+DdHgEaKGXNxe73DYts8EEqVSGllJ7
+      pDAWwOjICKgNOLwDvPrSJDabjYWFBTRaiRfOvITN3cN3vnV6z14Z9HrMZtNmoSxaaAx6/E47
+      DUVFqwU9XhdnX/rmnu0IDh4dHgHUuB0mCugIeM04rA4Mus39vjmtekdhLICZSJG6NMfw6Cha
+      wOv1cfq0g0ZunbVIhMGRUfQqaOzRq2azyejoGE59g4begUppovMN8b3RAKFEGY3ZzZAs79GK
+      4CAiRHCbbAgRfDg4kCJYIOgUbZsCNStZbs2uMdjfS7FSo14pYjMb0chWsokYKo2E0myg0Row
+      GXU0a+VtEQxQyaf49LN7vPHaK/z8H/8vVv8IydADBofHWAuFeOmHf4RfVrXLfUGX0LYRoFGt
+      4AwcIbYepZzP0ASSmRzxyBJQRymXiKcVaqU8qV3OCTZYnNsrvlqtlpZSxmpzcuvuPKcmBslX
+      lHa5Lugi2jYC6Gw+9OEQzr4+svkSLoeVciGLRrZi0KqgqcJRrZAv13DZLY+cE1z8worvxNEJ
+      TL5BYkv3eeV7b7A4t8BJ51NJZBX8jvH/AXhclN0hWVAZAAAAAElFTkSuQmCC
+    </thumbnail>
+    <thumbnail height='192' name='SIPRI Arms sales 2010-2016' width='192'>
+      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
+    </thumbnail>
+  </thumbnails>
+</workbook>
