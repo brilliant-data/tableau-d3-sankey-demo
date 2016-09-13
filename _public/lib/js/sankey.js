@@ -118,11 +118,9 @@ d3.sankey = function() {
     while (remainingNodes.length) {
       nextNodes = [];
       remainingNodes.forEach(function(node) {
-        //console.log("============ Doing node::", node);
         node.x = x;
         node.dx = nodeWidth;
         node.sourceLinks.forEach(function(link) {
-          //console.log("Checking source link:", link);
           if (nextNodes.indexOf(link.target) < 0) {
             nextNodes.push(link.target);
           }

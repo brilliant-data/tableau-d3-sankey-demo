@@ -34,10 +34,11 @@ getColumnIndexes = (table, required_keys)->
 # Takes a Tableau Row and a "COL_NAME" => COL_IDX map and returns
 # a new object with the COL_NAME fields set to the corresponding values
 convertRowToObject = (row, attrs_map)->
-  o = {}
-  for name, id of attrs_map
-    o[name] = row[id].value
-  o
+  _.mapObject attrs_map, (id, name)-> row[id].value
+  #o = {}
+  #for name, id of attrs_map
+    #o[name] = row[id].value
+  #o
 
 
 
@@ -52,17 +53,10 @@ CANVAS_SELECTOR = '#sankey-canvas'
 
 makeSanKeyData = (rowsIn)->
 
-  trf = (row)->
-    pn = row["Pivot Field Names"]
-    pv = row["Pivot Field Values"]
-
-
-    return _.extend {}, row, switch pn
-      when "buyer" then {sellercod: "From: #{row.sellercod}", role: "buyer"}
-      when "seller" then {buyercod: "To: #{row.buyercod}", role: "seller"}
-
-
-  rows = _.map rowsIn, trf
+  rows = _.map rowsIn, (row)->
+    _.extend {}, row, switch row["Pivot Field Names"]
+      when "buyer" then {sellercod: "From: #{row.sellercod}"}
+      when "seller" then {buyercod: "To: #{row.buyercod}"}
 
   all_names = _.pluck(rows, "sellercod").concat( _.pluck(rows, "buyercod"))
 
