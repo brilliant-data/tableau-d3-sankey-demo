@@ -1,4 +1,4 @@
-# tableau-js-api-modify-underlying-data
+# Sankey Diagram in Tableau
 
 ![alt tag](https://raw.githubusercontent.com/brilliant-data/tableau-d3-sankey-demo/master/sankey.gif)
 
