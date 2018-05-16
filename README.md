@@ -15,7 +15,9 @@ Install the `index.html` file found in `_public` to your Tableau Server
 as a web data connector (but change the address for the javascript and
 css files used to point to your local server).
 
-After the web data connector is installed, set the `SanKey HTML page URL`
+After the web data connector is installed, open the test workbook in Tableau Desktop,
+add the `sipri-arms-by-seller-2006-2016.csv` file found in `app\sql` as data source
+and replace the existing data source with it, set the `SanKey HTML page URL`
 parameter in the test workbook to point to the newly installed web data
 connector. This allow the dashboard to load the web data connector to
 the right side of the screen, which in turn forwards the requests to
